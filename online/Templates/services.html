@@ -1,0 +1,356 @@
+{% load static %}
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="zxx">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>UBuy
+	</title>
+	<!-- Template CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/style-starter.css' %}">
+	<!-- Template CSS -->
+
+	<link href="//fonts.googleapis.com/css?family=Spartan:400,500,600,700,900&display=swap" rel="stylesheet">
+
+	<!-- Template CSS -->
+</head>
+
+<body class="cbp-spmenu-push">
+	<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+		
+		<ul>
+			<li  role="separator" class="nav-item" style="padding-top: 10px;padding-left: 10px;font-size: 15px;color:#6c757d;font-weight: bold;" ><span>USER CONTROL</span></a></li>
+			<li><a class="active" href="../../../home/{{User}}"><i style="font-size: 20px;padding-right: 10px; " class="fa fa-home"></i>Home</a></li>
+			<li><a href="../../../cart/{{User}}"><i style="font-size: 20px;padding-right: 10px; " class="fa fa-shopping-cart"></i>Shoping Cart</a></li>
+			<li><a href="#"><i style="font-size: 20px;padding-right: 10px; " class="fa fa-bullhorn"></i>New Trends</a></li>
+			<li  role="separator" class="nav-item" style="padding-left: 10px;font-size: 15px;color:#6c757d;font-weight: bold;" ><span>OUR INVENTORY</span></a></li>
+			<li><a href="../../../../requested_product/{{User}}/Books And Documents"><i style="font-size: 20px;padding-right: 10px; " class="fa fa-book"></i>Books And Documents</a></li>
+			<li><a href="../../../../requested_product/{{User}}/Automobiles"><i style="font-size: 20px;padding-right: 10px; " class="fa fa-bus"></i>Automobiles</a></li>
+			<li><a href="../../../../requested_product/{{User}}/Computers"><i style="font-size: 20px;padding-right: 10px; " class="fa fa-desktop"></i>Computers </a></li>
+			<li><a href="../../../../requested_product/{{User}}/Home Electronics"><i style="font-size: 20px;padding-right: 10px; " class="fa fa-television"></i>Home Electronics</a></li>
+			<li><a href="../../../../requested_product/{{User}}/Phones And Portables"><i style="font-size: 20px;padding-right: 10px; " class="fa fa-tablet"></i>Phones And Portables</a></li>
+            <li><a href="../../../categories/{{User}}" name="User" value="sklfskalf"><i style="font-size: 20px;padding-right: 10px; " class="fa fa-ellipsis-h"></i>More</a></li>
+			<li  role="separator" class="nav-item" style="padding-left: 10px;font-size: 15px;color:#6c757d;font-weight: bold;" ><span>GET INTOUTCH</span></a></li>
+			<li><a href="../../../about/{{User}}"><i style="font-size: 20px;padding-right: 10px; " class="fa fa-user-secret"></i>About Us</a></li>
+			<li><a href="../../../message/{{User}}"><i style="font-size: 20px;padding-right: 10px; " class="fa fa-commenting-o"></i>Contact</a></li>
+			<li  role="separator" class="nav-item" style="padding-left: 10px;font-size: 15px;color:#6c757d;font-weight: bold;" ><span>SITE CONFIGURATION</span></a></li>
+			<li><a href="contact.html"><i style="font-size: 20px;padding-right: 10px; " class="fa fa-gear"></i>Settings</a></li>
+		</ul>
+	</nav>
+	<div class="main buttonset">
+		<!--/tophny-header-->
+		<div class="tophny-header" style="background-color: #F5F5F5; position: fixed;border-radius: 10px;top: -7px;width: 100%; box-shadow: 0px 3px 2px #1616164d;">
+			<div class="container">
+				<div class="hny-topgds">
+					<div class="menu-notify">
+						<button id="showLeftPush"><span class="fa fa-bars" aria-hidden="true"></span></button>
+
+					</div>
+					<div class="logo text-center">
+						<h1><a class="navbar-brand"  href="main.html">
+						  
+											<a  class="navbar-brand" href="#main.html">
+												<img src="{% static 'assets/images/PZONE LOGO.png' %}"style="width:90px;height:55px" alt="Your logo" title="Your logo" style="height:35px;" />
+											</a> 
+					</div>
+					<div class="icon-left search-right text-right">
+						<a class="topuser" href="../../../../log/{{User}}" ><img src="../static/media/Clients/{{User}}.jpg" style="width:35px ;height:35px;border-radius: 100px;border-color: #F5F5F5 ;"></span></a>
+						<a href="#search"  class="hnysearch-icon" title="search"><span class="fa fa-search"
+								aria-hidden="true"></span></a>
+						<!-- search popup -->
+						<div id="search" class="pop-overlay">
+							<div class="popup">
+								<h3 class="hny-title two">Search Here</h3>
+								<form action="../../../Find" method="post" class="search-box">
+									{% csrf_token %}
+									<input type="search" placeholder="Search your Keyword" name="LookFor"
+										required="required" autofocus="">
+										<input type="hidden" name="User" value="{{User}}" />	
+									<button type="submit" class="btn">Search</button>
+								</form>
+
+
+							</div>
+							<a class="close" href="#close">×</a>
+						</div>
+						<!-- /search popup -->
+					</div>
+				</div>
+			</div>
+			<!--//tophny-header-->
+		</div>
+		<!--//tophny-header-->
+		<!--/services-->
+		<!--services-2-->
+		<section class="w3l-services-2 w3l-services-1">
+			<div class="services-2-content py-5" id="services">
+				<div class="container py-lg-5 py-md-4">
+					<div style="padding-bottom: 20px;"></div>
+					<div class="title-head text-center mb-lg-5 mb-4">
+						
+						<h3 class="hny-title">All <span>Categories</span> </h3>
+						<p class="ser-para">All categories here are available and ready tobe delivered.</span></p>
+					</div>
+					<!-- /give-set1-->
+					<div class="give-set1 mb-5 pt-3">
+						<h4 class="hny-title mb-3">Home <span>Accessories</span></h4>
+						<div class="row">
+							<div class="col-md-3 col-6 mt-4">
+								<a href="../../../../requested_product/{{User}}/Electrical Appliance">
+									<div class="serhny-item mt-2">
+										<span class="fa fa-plug" aria-hidden="true"></span>
+										<p>Electrical Appliance</p>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-3 col-6 mt-4">
+								<a href="../../../../requested_product/{{User}}/Home Electronics">
+									<div class="serhny-item">
+										<span class="fa fa-television"
+											aria-hidden="true"></span>
+										<p>Home Electronics</p>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-3 col-6 mt-4">
+								<a href="../../../../requested_product/{{User}}/Paint And Finishes">
+									<div class="serhny-item">
+										<span class="fa fa-paint-brush" aria-hidden="true"></span>
+										<p>Paint And Finishes</p>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-3 col-6 mt-4">
+								<a href="../../../../requested_product/{{User}}/Plumbing">
+									<div class="serhny-item">
+										<span class="fa fa-bath" aria-hidden="true"></span>
+										<p>Plumbing</p>
+									</div>
+								</a>
+							</div>
+
+						</div>
+					</div>
+					<!-- /give-set1-->
+					<div class="give-set1 mt-lg-4 mb--sm-5 mb-4 pt-sm-4 pt-3">
+						<h4 class="hny-title mb-3">Entatainment <span>Accessories</span></h4>
+						<div class="row">
+							<div class="col-md-3 col-sm-6 col-6 mt-sm-4 mt-3">
+								<a href="../../../../requested_product/{{User}}/Sound Systems">
+									<div class="serhny-item mt-2">
+										<span class="fa fa-music" aria-hidden="true"></span>
+										<p>Sound Systems</p>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-3 col-6 mt-4">
+								<a href="../../../../requested_product/{{User}}/Visuals">
+									<div class="serhny-item">
+										<span class="fa fa-video-camera" aria-hidden="true"></span>
+										<p>Visuals</p>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-3 col-sm-6 col-6 mt-sm-4 mt-3">
+								<a href="../../../../requested_product/{{User}}/Lighing And Deco">
+									<div class="serhny-item mt-2">
+										<span class="fa fa-lightbulb-o" aria-hidden="true"></span>
+										<p>Lighing And Deco</p>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-3 col-sm-6 col-6 mt-sm-4 mt-3">
+								<a href="../../../../requested_product/{{User}}/Game Stations">
+									<div class="serhny-item mt-2">
+										<span class="fa fa-gamepad" aria-hidden="true"></span>
+										<p>Game Stations</p>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-3 col-sm-6 col-6 mt-sm-4 mt-3">
+								<a href="../../../../requested_product/{{User}}/Phones And Portables">
+									<div class="serhny-item mt-2">
+										<span class="fa fa-tablet" aria-hidden="true"></span>
+										<p>Phones And Portables</p>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-3 col-sm-6 col-6 mt-sm-4 mt-3">
+								<a href="../../../../requested_product/{{User}}/Books And Documents">
+									<div class="serhny-item mt-2">
+										<span class="fa fa-book" aria-hidden="true"></span>
+										<p>Books and Documents</p>
+									</div>
+								</a>
+							</div>
+
+						</div>
+						<!-- /give-set1-->
+						<div class="give-set1 mt-lg-4 mb-5 pt-5">
+							<h4 class="hny-title mb-3">Work And Office <span>Accessories</span></h4>
+							<div class="row">
+								<div class="col-md-3 col-sm-6 col-6 mt-sm-4 mt-3">
+									<a href="../../../../requested_product/{{User}}/Computers">
+										<div class="serhny-item mt-2">
+											<span class="fa fa-desktop" aria-hidden="true"></span>
+											<p>Computers</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-3 col-6 mt-4">
+									<a href="../../../../requested_product/{{User}}/Desk Accessories">
+										<div class="serhny-item">
+											<span class="fa fa-columns" aria-hidden="true"></span>
+											<p>Desk Accessories</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-3 col-sm-6 col-6 mt-sm-4 mt-3">
+									<a href="../../../../requested_product/{{User}}/Field Accessories">
+										<div class="serhny-item mt-2">
+											<span class="fa fa-wrench" aria-hidden="true"></span>
+											<p>Field Accessories</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-3 col-sm-6 col-6 mt-sm-4 mt-3">
+									<a href="../../../../requested_product/{{User}}/Chemicals And Solutions">
+										<div class="serhny-item mt-2">
+											<span class="fa fa-bed" aria-hidden="true"></span>
+											<p>Chemicals And Solutions</p>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!-- /give-set1-->
+						</div>
+					</div>
+				</div>
+		</section>
+		<!-- //services-1-->
+		<!--services-2-->
+		<section class="w3l-services-2">
+			<div class="services-2-content py-5" id="services">
+				<div class="container py-lg-5 py-md-4">
+					<div class="row">
+						<div class="col-lg-4 column1 align-self pr-lg-4">
+							<h4>Parts And Machinery</h4>
+						</div>
+						<div class="col-lg-8 column2 mt-lg-0 mt-sm-5 mt-sm-4 mt-3">
+							<div class="row">
+								<div class="col-md-3 col-sm-6 col-6">
+									<a href="../../../../requested_product/{{User}}/Automobiles">
+										<div class="serhny-item">
+											<span class="fa fa-car"
+												aria-hidden="true"></span>
+											<p>Automobiles</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-3 col-sm-6 col-6">
+									<a href="../../../../requested_product/{{User}}/Bicycle And Scooter">
+										<div class="serhny-item">
+											<span class="fa fa-bicycle" aria-hidden="true"></span>
+											<p>Bicycle And Scooter</p>
+										</div>
+									</a>
+								</div>
+								
+								<div class="col-md-3 col-sm-6 col-6 mt-md-0 mt-sm-4 mt-3">
+									<a href="../../../../requested_product/{{User}}/Navigational Tools">
+										<div class="serhny-item">
+											<span class="fa fa-sitemap" aria-hidden="true"></span>
+											<p>Navigational Tools</p>
+										</div>
+									</a>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- //services-2-->
+		<!--w3l-faq-6 -->
+
+	<!--//services-->
+	<!--//services-->
+	<!-- footer-28 block -->
+	<section class="w3l-footer">
+		<footer class="footer-28">
+			<div class="footer-bg-layer">
+				<div class="container py-lg-3">
+					
+						
+				<div class="midd-footer-28 align-center py-lg-4 py-3 mt-5">
+					<div class="container">
+						<p class="copy-footer-28 text-center"> &copy; 2022 UBuy. All Rights Reserved.</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- move top -->
+		<button onclick="topFunction()" id="movetop" title="Go to top">
+			<span class="fa fa-arrow-up" aria-hidden="true"></span>
+		</button>
+		<script>
+			// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function () {
+				scrollFunction()
+			};
+
+			function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					document.getElementById("movetop").style.display = "block";
+				} else {
+					document.getElementById("movetop").style.display = "none";
+				}
+			}
+
+			// When the user clicks on the button, scroll to the top of the document
+			function topFunction() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
+		</script>
+		<!-- /move top -->
+	</section>
+	<!-- //footer-28 block -->
+
+
+
+	</div>
+	<script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+	<!--/top-nav-->
+	<script src="{% static 'assets/js/jquery-2.1.4.min.js' %}"></script>
+	<script src="{% static 'assets/js/modernizr.custom.js' %}"></script>
+	<script src="{% static 'assets/js/classie.js' %}"></script>
+	<script>
+		var menuLeft = document.getElementById('cbp-spmenu-s1'),
+			showLeftPush = document.getElementById('showLeftPush'),
+			body = document.body;
+
+		showLeftPush.onclick = function () {
+			classie.toggle(this, 'active');
+			classie.toggle(body, 'cbp-spmenu-push-toright');
+			classie.toggle(menuLeft, 'cbp-spmenu-open');
+			disableOther('showLeftPush');
+		};
+
+		function disableOther(button) {
+			if (button !== 'showLeftPush') {
+				classie.toggle(showLeftPush, 'disabled');
+			}
+		}
+	</script>
+	<!--//top-nav-->
+	<!-- disable body scroll which navbar is in active -->
+	<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
